@@ -1,23 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/header/header.component.jsx';
+import SearchBox from './components/search-box/search-box.component.jsx';
+import FilterButton from './components/filter/filter.component.jsx';
+import EmployeesList from './components/employees-list/employees-list.component.jsx';
+import EmployeesAddForm from './components/employees-add-form/employees-add-form.component';
 
 function App() {
+  const data = [
+    {name: 'Волков Лев', salary: 800, increase: false,},
+    {name: 'Сомова Ксения', salary: 1200, increase: true},
+    {name: 'Борисов Тимур', salary: 1500, increase: false},
+    {name: 'Николас Мартинес', salary: 3500, increase: true}
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <Header company='Киви'/>
+      <section className='search-box'>
+        <SearchBox />
+        <FilterButton />
+      </section>
+      <EmployeesList data={data}/>
+      <EmployeesAddForm />
     </div>
   );
 }

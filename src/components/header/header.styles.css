@@ -1,0 +1,21 @@
+.header {
+  background-color: #38ada9;
+  color: #ffffff;
+  box-sizing: border-box;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 15px 15px 30px rgba(10, 61, 98, 0.25);
+}
+
+.header__title {
+  margin: 0;
+}
+
+.header__subtitle {
+  margin: 0;
+}
+
+.header__paragraph {
+  margin: 0;
+}

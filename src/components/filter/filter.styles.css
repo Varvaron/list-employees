@@ -1,0 +1,20 @@
+.btn-wrapper {
+  margin-top: 20px;
+}
+
+.btn {
+  min-width: 150px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 5px;
+  border: none;
+  background-color: #fff;
+  margin-right: 20px;
+  font-size: 14px;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff; 
+}

@@ -1,0 +1,73 @@
+.employees-item {
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  box-sizing: border-box;
+}
+
+.employees-item:not(:last-child) {
+  border-bottom: 1px solid #000;
+}
+
+.employees-item__name {
+  min-width: 600px;
+  line-height: 35px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.employees-item__input {
+  outline: none;
+  height: 35px;
+  line-height: 35px;
+  padding: 0 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.employees-item__icons {
+  width: 110px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.employees-item__button {
+  border: none;
+  background-color: #f1f2f6;
+  border-radius: 4px;
+  width: 35px;
+  height: 35px;
+  margin: 3px;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.fa-cookie {
+  color: #fad390;
+}
+
+.fa-trash {
+  color: #b71540;
+}
+
+.fa-star {
+  color: #f6b93b;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.employees-item.increase,
+.employees-item.increase {
+  color: #f6b93b;
+}
