@@ -58,13 +58,16 @@
 }
 
 .fa-star {
-  color: #f6b93b;
+  color: transparent;
   width: 35px;
   height: 35px;
   text-align: center;
   line-height: 35px;
   font-size: 16px;
-  cursor: pointer;
+}
+
+.like .fa-star {
+  color: #f6b93b;
 }
 
 .employees-item.increase,
