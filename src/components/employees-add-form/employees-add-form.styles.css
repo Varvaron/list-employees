@@ -6,10 +6,21 @@
   margin: 20px auto;
   border-radius: 10px;
   box-shadow: 15px 15px 30px rgba(10, 61, 98, 0.25);
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.add-form {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
 }
 
 .form__title {
   margin: 0 0 10px;
+  font-size: 14px;
+  text-align: center;
 }
 
 .add-form__input {
@@ -20,19 +31,42 @@
   border: none;
   border-radius: 5px;
   font-size: 16px;
-  margin-right: 20px;
-  min-width: 350px;
+  margin: 0 0 10px;
+  min-width: 180px;
+  box-sizing: border-box;
 }
 
 .add-form__button {
-  min-width: 150px;
+  min-width: 180px;
   height: 35px;
   line-height: 35px;
   border-radius: 5px;
   border: 1px solid #fff;
   color: #fff;;
   background-color: transparent;
-  margin-right: 20px;
+  margin: 0;
   font-size: 14px;
   cursor: pointer;
+  box-sizing: border-box;
+  padding: 0 10px;
+}
+
+@media (min-width: 768px) {
+  .add-form {
+    flex-direction: row;
+  }
+
+  .form__title {
+    font-size: 18px;
+  }
+
+  .add-form__input {
+    margin: 0 20px 10px 0;
+  }
+}
+@media (min-width: 1200px) {
+  .add-form__input {
+    margin: 0 20px 0 0;
+    min-width: 250px;
+  }
 }
