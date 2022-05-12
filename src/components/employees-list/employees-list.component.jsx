@@ -2,10 +2,16 @@ import React from 'react';
 import EmployeesItem from '../employee-item/employees-item.component';
 import './employees-list.styles.css';
 
-const EmployeesList = ({data}) => {
+const EmployeesList = ({ data, onDelete, onToggleProp }) => {
   const elements = data.map(item => {
+    const {id, ...itemProps} = item;
     return (
-      <EmployeesItem key={data.id} {...item}/>
+      <EmployeesItem 
+        key={id} 
+        {...itemProps} 
+        onDelete={() => onDelete(id)} 
+        onToggleProp={(evt) => onToggleProp(id, evt.currentTarget.getAttribute('data-toggle'))}
+      />
     )
   });
 
