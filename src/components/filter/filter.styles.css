@@ -9,12 +9,20 @@
 .btn {
   min-width: 200px;
   height: 40px;
+  box-sizing: border-box;
   line-height: 40px;
   border-radius: 5px;
+  text-align: center;
   border: none;
   background-color: #fff;
+  color: #000;
   margin: 0 0 10px;
   font-size: 14px;
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: #000;
 }
 
 .btn-outline {
