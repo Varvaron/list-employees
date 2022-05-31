@@ -1,7 +1,7 @@
 import './employees-item.styles.css';
 
 const EmployeesItem = (props) => {
-  const {name, salary, onDelete, onToggleProp, increase, rise} = props;
+  const {name, salary, onDelete, onToggleProp, onSalaryChange, increase, rise} = props;
 
   let itemClassNames = 'employees-item';
   if (increase) {
@@ -14,16 +14,27 @@ const EmployeesItem = (props) => {
 
   return (
     <li className={itemClassNames}>
-      <span className='employees-item__name' onClick={onToggleProp} data-toggle="rise">{name}</span>
-      <input type='text' className='employees-item__input' defaultValue={salary + '$'}/>
+      <span 
+        className='employees-item__name' 
+        onClick={onToggleProp} 
+        data-toggle="rise">{name}
+      </span>
+      <input 
+        type='text' 
+        className='employees-item__input' 
+        value={salary}
+        onChange={onSalaryChange}
+      />
       <div className='employees-item__icons'>
-        <button type='button' 
+        <button 
+          type='button' 
           className='employees-item__button' 
           onClick={onToggleProp} 
           data-toggle="increase">
           <i className='fas fa-cookie'></i>
         </button>
-        <button type='button' 
+        <button 
+          type='button' 
           className='employees-item__button' 
           onClick={onDelete}>
           <i className='fas fa-trash'></i>

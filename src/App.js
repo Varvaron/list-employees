@@ -15,7 +15,7 @@ class App extends React.Component {
         {name: 'Волков Лев', salary: 800, increase: true, rise: false, id: 1},
         {name: 'Сомова Ксения', salary: 1200, increase: false, rise: false, id: 2}, 
         {name: 'Борисов Тимур', salary: 1500, increase: false, rise: true, id: 3},
-        {name: 'Николас Мартинес', salary: 3500, increase: false, rise: false, id: 4}
+        {name: 'Титова Вероника', salary: 3500, increase: true, rise: false, id: 4}
       ], 
       term: '',
       filter: 'all'
@@ -54,6 +54,17 @@ class App extends React.Component {
       data: data.map(item => {
         if (item.id === id) {
           return {...item,  [prop]: !item[prop]}
+        }
+        return item;
+      })
+    })) 
+  }
+
+  onSalaryChange = (id, value) => {
+    this.setState(({data}) => ({
+      data: data.map(item => {
+        if (item.id === id) {
+          return {...item,  salary: value}
         }
         return item;
       })
@@ -106,6 +117,7 @@ class App extends React.Component {
           data={filteredData} 
           onDelete={this.deleteItem} 
           onToggleProp={this.onToggleProp}
+          onSalaryChange={this.onSalaryChange}
         />
         <EmployeesAddForm onAdd={this.addItem}/>
       </div>
